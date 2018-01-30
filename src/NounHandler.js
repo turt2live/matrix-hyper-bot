@@ -24,7 +24,7 @@ class NounHandler {
         this._wordpos.isNoun(message, isNoun => {
             LogService.info("NounHandler", "Message '" + message + "' is noun? " + isNoun);
             if (isNoun) {
-                this._client.sendNotice(event.getRoomId(), "hyper " + message);
+                this._client.sendNotice(event.getRoomId(), "hyper " + message.toLowerCase());
             }
         });
     }
