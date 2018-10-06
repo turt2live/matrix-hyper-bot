@@ -1,6 +1,8 @@
 homeserverUrl: "https://t2bot.io"
 accessToken: "YOUR_TOKEN_HERE"
-userId: "@hyperbot:t2bot.io"
+
+# Where sync data and other related information should be stored
+dataPath: "storage"
 
 # Settings for controlling how logging works
 logging:

@@ -4,6 +4,8 @@ config/*
 /.idea
 
 /db
+/storage
+/lib
 
 # Logs
 logs
