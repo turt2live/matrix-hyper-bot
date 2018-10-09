@@ -44,7 +44,7 @@ function tryHyperizing(event: any, roomId: string) {
         LogService.info("tryHyperizing", `Message '${message}' is noun? ${isNoun}`);
         if (isNoun) {
             const hyperized = "hyper " + message.toLowerCase();
-            const reply = RichReply.createFor(event, hyperized, hyperized);
+            const reply = RichReply.createFor(roomId, event, hyperized, hyperized);
             reply["msgtype"] = "m.notice";
             return client.sendMessage(roomId, reply);
         }
