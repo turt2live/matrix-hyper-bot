@@ -1,5 +1,6 @@
 import {
     AutojoinRoomsMixin,
+    AutojoinUpgradedRoomsMixin,
     MatrixClient,
     RichRepliesPreprocessor,
     RichReply,
@@ -34,6 +35,7 @@ client.getUserId().then(uid => {
     });
 
     AutojoinRoomsMixin.setupOnClient(client);
+    AutojoinUpgradedRoomsMixin.setupOnClient(client);
     client.setJoinStrategy(new SimpleRetryJoinStrategy());
     return client.start();
 }).then(() => LogService.info("index", "Hyperbot started!"));
